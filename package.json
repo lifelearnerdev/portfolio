@@ -1,0 +1,37 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Eric Malaba's portfolio front-end developer",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Malaba6/portfolio.git"
+  },
+  "keywords": [
+    "eric",
+    "malaba",
+    "mashauri",
+    "front-end",
+    "developer"
+  ],
+  "author": "Eric Malaba",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Malaba6/portfolio/issues"
+  },
+  "homepage": "https://github.com/Malaba6/portfolio#readme",
+  "dependencies": {
+    "babel-loader": "^8.1.0",
+    "css-loader": "^5.0.0",
+    "csv-loader": "^3.0.3",
+    "eslint-loader": "^4.0.2",
+    "file-loader": "^6.2.0",
+    "image-webpack-loader": "^7.0.1",
+    "sass-loader": "^10.0.4",
+    "style-loader": "^2.0.0",
+    "xml-loader": "^1.2.1"
+  }
+}
