@@ -8,9 +8,6 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx"],
   },
-  node: {
-    fs: "empty",
-  },
   output: {
     path: path.resolve(__dirname, "dist"),
     publicPath: "/",
@@ -20,6 +17,8 @@ module.exports = {
     historyApiFallback: {
       disableDotRule: true,
     },
+    inline:true,
+    port: 8082
   },
   module: {
     rules: [
@@ -38,6 +37,27 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(png|jpe?g|gif|svg|ico)$/,
+        use: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              bypassOnDebug: true,
+              disable: true
+            }
+          }
+        ]
+      },
+      {
+        test: /\.css$/,
+        use: [
+
+          'style-loader',
+          'css-loader'
+        ]
+      }
     ],
   },
   plugins: [

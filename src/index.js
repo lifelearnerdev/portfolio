@@ -1,5 +1,10 @@
-import React from 'react';
+// import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './components/App';
+import { BrowserRouter } from 'react-router-dom';
 
-ReactDOM.render(<h1>Eric Malaba Portfolio</h1>,
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
   document.getElementById('root'));
