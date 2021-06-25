@@ -6,9 +6,6 @@
 /*Nav Bar*/
 
 .nav-bar {
-  /* max-width: 100%;
-  max-height: 3em;
-  background: red; */
   display: flex;
   padding-left: 2em;
   padding-bottom: 0.5em;
@@ -20,18 +17,15 @@
 .logo {
   max-width: 100%;
   max-height: 100%;
-  /* border: red solid thin; */
 }
 
 .logo-wrapper {
   width: 10em;
   height: 5em;
   margin-right: 20em;
-  /* display: inline-table; */
 }
 
 .nav-items-wrapper {
-  /* height: 3em; */
   width: fit-content;
   border: none;
   margin-top: 1.2em;
@@ -44,4 +38,46 @@
 .nav-item {
   float: right;
   margin-left: 8em;
+}
+
+.me-img-wrapper {
+  width: 10em;
+  height: 10em;
+}
+
+.profile-img {
+  border-radius: 50%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+
+.me-main {
+  background: #245768;
+  width: 100%;
+}
+
+.me-wrapper {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+  color: #fff;
+}
+.me-wrapper .content {
+  margin: 0 auto;
+}
+
+.me-name {
+  font-size: 3em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight:400;
+}
+
+.me-description  {
+  font-size: 1.2em;
+  font-weight: lighter;
 }

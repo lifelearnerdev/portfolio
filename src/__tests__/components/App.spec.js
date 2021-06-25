@@ -8,7 +8,6 @@ describe('Should render <App />', () => {
       <App />
     </BrowserRouter>
   );
-
   it('Should render App component', () => {
     expect(wrapper.length).toBe(1);
   });
