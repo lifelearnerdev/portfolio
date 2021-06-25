@@ -1,26 +1,42 @@
 import React, { memo } from 'react';
+import PropTypes from 'prop-types';
 import logo from '../../assets/images/logo.png';
 import '../../assets/styles/index.css';
 
-const NavBar = () => {
+const NavBar = ({
+  setCurrentRef,
+  skillsRef
+}) => {
+  const handleSkillsClick = () => {
+    setCurrentRef(skillsRef);
+  };
+
   return (
     <div className='nav-bar'>
       <div className='logo-wrapper'>
-        <img src={logo} alt='logo' className='logo' />
+        <img src={logo} alt='logo' className='logo' id='logo' />
       </div>
       <div className='nav-items-wrapper'>
-        <span className='nav-item'>
+        <button
+          className='nav-item'
+          onClick={handleSkillsClick}
+        >
           {'Skills'}
-        </span>
-        <span className='nav-item'>
+        </button>
+        <button className='nav-item'>
           {'Work'}
-        </span>
-        <span className='nav-item'>
+        </button>
+        <button className='nav-item'>
           {'Contacts'}
-        </span>
+        </button>
       </div>
     </div>
   );
+};
+
+NavBar.propTypes = {
+  setCurrentRef: PropTypes.func,
+  skillsRef: PropTypes.element
 };
 
 export default memo(NavBar);

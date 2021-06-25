@@ -4,7 +4,7 @@ import HomePage from './home';
 const App = () => 
   <>
     <Switch>
-      <Route exact path="/" render={props => <HomePage {...props} />} />
+      <Route exact path="/" component={HomePage} />
     </Switch>
   </>
 ;
