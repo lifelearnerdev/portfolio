@@ -12,8 +12,8 @@ const Me = () => {
           {'Eric Malaba'}
         </h1>
         <p className='me-description content'>
-          {'Software engineer, full stack web developper\
-           with focus to the front-end. Pationate about \
+          {'Software Engineer, Full-stack Web Developper\
+           with focus on the front-end. Pationate about \
            Javascript and a Blockchain enthousiast.'}
         </p>
       </div>
