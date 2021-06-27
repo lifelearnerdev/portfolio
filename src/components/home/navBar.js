@@ -1,14 +1,73 @@
-import React, { memo } from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
+import { MenuRounded } from '@material-ui/icons';
 import logo from '../../assets/images/logo.png';
 import '../../assets/styles/index.css';
 
 const NavBar = ({
-  setCurrentRef,
-  skillsRef
+  skillsRef,
+  scrollToSection
 }) => {
-  const handleSkillsClick = () => {
-    setCurrentRef(skillsRef);
+
+  const deskRef = useRef();
+
+  const renderDeskMenu =  
+    <div
+      className='nav-items-wrapper desktopMenu'
+      ref={deskRef}
+    >
+      <button
+        className='nav-item'
+        id='nav-item-contancts'
+      >
+        {'Contacts'}
+      </button>
+      <button
+        className='nav-item'
+        id='nav-item-work'
+      >
+        {'Work'}
+      </button>
+      <button
+        className='nav-item'
+        id='nav-item-skills'
+        onClick={() => handleClick(skillsRef)}
+      >
+        {'Skills'}
+      </button>
+    </div>;
+
+  const renderMobileMenu =  
+    <div
+      className='nav-items-wrapper mobileMenu'
+      // ref={deskRef}
+      id='menu'
+      role='menu'
+      aria-labelledby='menu-button'
+    >
+      <button
+        className='nav-item'
+        id='nav-item-contancts'
+      >
+        {'Contacts'}
+      </button>
+      <button
+        className='nav-item'
+        id='nav-item-work'
+      >
+        {'Work'}
+      </button>
+      <button
+        className='nav-item'
+        id='nav-item-skills'
+        onClick={() => handleClick(skillsRef)}
+      >
+        {'Skills'}
+      </button>
+    </div>;
+
+  const handleClick = (ref) => {
+    scrollToSection(ref);
   };
 
   return (
@@ -16,27 +75,24 @@ const NavBar = ({
       <div className='logo-wrapper'>
         <img src={logo} alt='logo' className='logo' id='logo' />
       </div>
-      <div className='nav-items-wrapper'>
-        <button
-          className='nav-item'
-          onClick={handleSkillsClick}
-        >
-          {'Skills'}
-        </button>
-        <button className='nav-item'>
-          {'Work'}
-        </button>
-        <button className='nav-item'>
-          {'Contacts'}
-        </button>
-      </div>
+      <MenuRounded
+        id='menu-button'
+        role='button'
+        className='menu-mobile'
+        aria-aria-haspopup='true'
+        aria-aria-controls='menu'
+      />
+      {renderMobileMenu}
+      {renderDeskMenu}
     </div>
   );
 };
 
 NavBar.propTypes = {
-  setCurrentRef: PropTypes.func,
-  skillsRef: PropTypes.element
+  scrollToSection: PropTypes.func,
+  skillsRef: PropTypes.any,
+  workRef: PropTypes.any,
+  setCurrentRef: PropTypes.func
 };
 
-export default memo(NavBar);
+export default NavBar;
