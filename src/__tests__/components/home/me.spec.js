@@ -1,6 +1,6 @@
 import { shallow } from 'enzyme';
 import Me from '../../../components/home/me';
-import profileImg from '../../../assets/images/profile.jpg';
+import profileImg from '../../../assets/images/profile.JPG';
 
 describe('<Me />', () => {
   let wrapper = shallow(<Me />);
