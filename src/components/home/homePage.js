@@ -5,7 +5,10 @@ import Skills from './skills';
 
 const HomePage = () => {
   const skillsRef = useRef();
-  const scrollToSection = (ref) => window.scrollTo(0, ref.current.offsetTop);
+
+  const scrollToSection = (ref) => {
+    window.scrollTo(0, ref.current.offsetTop);
+  };
 
   return (
     <>
@@ -21,4 +24,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default React.memo(HomePage);

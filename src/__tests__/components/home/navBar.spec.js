@@ -24,6 +24,6 @@ describe('<NavBar />', () => {
     expect(buttons.length).toBe(3);
   });
   it('should simulation skills button click', () => {
-    wrapper.find('button').at(2).prop('onClick')();
+    wrapper.find('button').at(0).prop('onClick')();
   });
 });

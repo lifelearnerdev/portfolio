@@ -13,7 +13,7 @@ const Me = () => {
         </h1>
         <p className='me-description content'>
           {'Software Engineer, Full-stack Web Developper\
-           with focus to the front-end. Pationate about \
+           with focus on the front-end. Pationate about \
            Javascript and a Blockchain enthousiast.'}
         </p>
       </div>

@@ -15,8 +15,8 @@ describe('<Skills />', () => {
   it('should call the <Title /> with title Skills', () => {
     expect(wrapper.find(Title).at(0).prop('title')).toEqual('Skills');
   });
-  it('should call the <SkillsCard /> within <Skills>', () => {
-    expect(wrapper.find(SkillsCard).length).toBe(1);
+  it('should call the <SkillsCard />', () => {
+    expect(wrapper.find(SkillsCard).length).toBe(3);
   });
 });
 
@@ -46,17 +46,9 @@ describe('<SkillsCard />', () => {
     expect(wrapper.length).toBe(1);
   });
   it('should contain card icon', () => {
-    console.log('**** ', wrapper.debug());
     expect(wrapper.find(Person).length).toBe(1);
   });
   it('should contain card icon', () => {
     expect(wrapper.find('#card-title').props().children).toEqual(title);
   });
 });
-
-// describe('<SkillsList />', () => {
-//   let wrapper = shallow(<SkillsList skill={skill} />);
-//   it('should render the <SkillsList /> component', () => {
-//     expect(wrapper.length).toBe(1);
-//   });
-// });
