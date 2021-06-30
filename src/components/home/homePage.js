@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import NavBar from './navBar';
 import Me from './me';
 import Skills from './skills';
+import Work from './work';
 
 const HomePage = () => {
   const skillsRef = useRef();
@@ -19,6 +20,7 @@ const HomePage = () => {
         />
         <Me />
         <Skills skillsRef={skillsRef} />
+        <Work />
       </div>
     </>
   );
