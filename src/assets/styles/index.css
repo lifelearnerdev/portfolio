@@ -1,6 +1,7 @@
 .main-wrapper {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
+  color: #2c2223;;
 }
 
 /*Nav Bar*/
@@ -224,4 +225,141 @@
     margin: 0 auto;
     margin-bottom: 1em;
   }
+}
+
+.sample-img {
+  width: 100%;
+  height: 100%;
+}
+
+.work-wrapper {
+  background: #ebf0f1;
+  padding-top: 0.3em;
+}
+
+.work-sample-wrapper {
+  width: 65%;
+  margin: 0 auto;
+  min-height: 395px;
+  border: none;
+  padding-bottom: 1em;
+  /* border-bottom: solid red thin;  */
+}
+
+.work-with-sample {
+  display: flex;
+  flex-direction: row;
+  /* margin: 3em 0; */
+  width: 100%;
+  /* align-items: flex-end;
+  align-content: flex-end; */
+  /* border: solid red thin; */
+}
+
+.work-img-div {
+  width: 65%;
+}
+
+.work-img-div-left {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#project-name {
+  font-size: 4.5rem;
+  display: flex;
+  flex: 1;
+  /* align-content: center; */
+  align-items: center;
+  justify-content:flex-end;
+  /* width: 40%; */
+  /* border: solid red thin; */
+  text-align: end;
+  color: #2c2223;
+}
+
+#project-name-left {
+  font-size: 4.5rem;
+  display: flex;
+  flex: 1;
+  /* align-content: center; */
+  align-items: center;
+  justify-content:flex-start;
+  /* width: 40%; */
+  /* border: solid red thin; */
+  text-align: end;
+}
+
+.sample-toggle-btn {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-end ;
+  /* border: red solid thin; */
+  height: 3em;
+  margin-top: 1em;
+}
+
+.with-desc-wrapper {
+  text-align: center;
+  /* border: red solid thin; */
+  height: 100%;
+  padding-bottom: 2em;
+  border: none;
+  border-bottom: 1px #dfdede solid;
+}
+
+.work-project-name {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+.work-desc {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.work-skills {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* border: red solid thin; */
+  justify-content: space-between;
+}
+
+.project-desc {
+  color: #8d8d8d;
+  margin-bottom: 2em;
+}
+
+.work-divider {
+  border: none;
+  border-left: solid 1px #dfdede;
+}
+
+.work-skills-container {
+  color: #8d8d8d;
+  /* flex: 1; */
+  /* display: flex; */
+  /* justify-content: flex-start; */
+}
+
+#go-to-site {
+  /* flex: 1; */
+  font-size: 1.2rem;
+  height: 3em;
+  background: inherit;
+  border: none;
+  color: #f44336;
+}
+
+.go-to-site {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#go-to-site:hover {
+  cursor: pointer;
 }
