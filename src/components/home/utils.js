@@ -50,7 +50,10 @@ export const WorkSample = ({
   projectName,
   projectDesc,
   projectSkills,
-  direction
+  direction,
+  projectLink,
+  mobile,
+  classes
 }) => {
   const [isDescriptionOn, setIsDescriptionOn] = useState(false);
   const [isHoverOn, setIsHoverOn] = useState(false);
@@ -129,11 +132,16 @@ export const WorkSample = ({
         className='work-with-sample'
         onMouseLeave={handleToggleLeave}
         onMouseOver={handleToggleHover}>
-        <div className='work-img-div'>
-          <img
+        <div className={`work-img-div ${classes}`}>
+          {/* <img
             src={sampleImg}
             alt='sample image'
             className='sample-img' />
+          {mobile && <img
+            src={mobile}
+            alt='mobile'
+            className='work-img-mobile' />} */}
+          {mobile && <div className='work-img-div-mobile' />}
         </div>
         <div id='project-name'>
           {projectName}
@@ -145,7 +153,7 @@ export const WorkSample = ({
         <div id='project-name-left'>
           {projectName}
         </div>
-        <div className='work-img-div-left'>
+        <div className={`work-img-div-left ${classes}`}>
           <img
             src={sampleImg}
             alt='sample image'
@@ -171,15 +179,19 @@ export const WorkSample = ({
           <div className='go-to-site'>
             <a
               id='go-to-site'
-              href='https://deeplearningindaba.com/2021'>
+              target='_blank'
+              rel='noreferrer'
+              href={projectLink}>
               {`Go to ${projectName} site`}
             </a>
           </div>
         </div>
       </div>
     </div>;
-  
-  return <div className='work-sample-wrapper'>
+
+  return <div className={!direction
+    ? 'work-sample-wrapper work-hide'
+    : 'work-sample-wrapper '}>
     {toggleButton}
     {isDescriptionOn
       ? withDesc
@@ -200,5 +212,8 @@ WorkSample.propTypes = {
   projectName: PropTypes.string.isRequired,
   projectDesc: PropTypes.string.isRequired,
   projectSkills: PropTypes.array.isRequired,
-  direction: PropTypes.string
+  direction: PropTypes.string,
+  projectLink: PropTypes.string,
+  mobile: PropTypes.any,
+  classes: PropTypes.string.isRequired
 };
