@@ -1,8 +1,8 @@
 import React from 'react';
 import { WorkSample, Title } from './utils';
-import baobab from '../../assets/images/baobab.png';
-import healthid from '../../assets/images/healthid.png';
-import ahdesk from '../../assets/images/ahdesk.png';
+// import baobab from '../../assets/images/baobab.png';
+// import healthid from '../../assets/images/healthid.png';
+// import ahdesk from '../../assets/images/ahdesk.png';
 import ahMobile from '../../assets/images/ah.png';
 
 export const Work = () => {
@@ -28,7 +28,6 @@ export const Work = () => {
     <Title title='Work' />
     <WorkSample
       projectName='Baobab'
-      sampleImg={baobab}
       projectDesc={baobabDesc}
       classes='work-img-div-baobab'
       projectLink='https://deeplearningindaba.com/2021'
@@ -36,19 +35,25 @@ export const Work = () => {
     <WorkSample
       direction='left'
       projectName='HealthID'
-      sampleImg={healthid}
       projectDesc={healthIDDesc}
       classes='work-img-div-healthid'
       projectLink='https://healthid-fe.herokuapp.com'
       projectSkills={healthIDSkills} />
     <WorkSample
       projectName='Authors Haven'
-      sampleImg={ahdesk}
       projectDesc={baobabDesc}
       classes='work-img-div-ah'
       mobile={ahMobile}
       projectLink='https://demeter-ah-frontend-staging.herokuapp.com'
       projectSkills={baobabSkills} />
+    <WorkSample
+      direction='left'
+      projectName='Portfolio'
+      projectDesc={healthIDDesc}
+      mobile={true}
+      classes='work-img-div-portfolio'
+      projectLink='https://healthid-fe.herokuapp.com'
+      projectSkills={healthIDSkills} />
   </div>;
 };
 
