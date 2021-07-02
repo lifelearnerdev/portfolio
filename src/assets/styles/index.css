@@ -200,7 +200,27 @@
   background: url('../images/ahdesk.png');
   background-repeat: no-repeat;
   background-size: cover;
-  /* border: solid red thin; */
+  height: 318px;
+}
+
+.work-img-div-baobab {
+  background: url('../images/baobab.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 318px;
+}
+
+.work-img-div-healthid {
+  background: url('../images/healthid.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 318px;
+}
+
+.work-img-div-portfolio {
+  background: url('../images/portfolio.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 318px;
 }
 
@@ -208,8 +228,17 @@
   background: url('../images/ah.png');
   background-repeat: no-repeat;
   background-size: contain;
-  /* border: solid red thin; */
   left: 13em;
+  margin-top: 3em;
+  width: 20%;
+  height: 300px;
+  position: absolute;
+}
+.work-img-div-mob-port {
+  background: url('../images/portmobile.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: 3.2em;
   margin-top: 3em;
   width: 20%;
   height: 300px;
@@ -217,6 +246,7 @@
 }
 
 .work-img-div-left {
+  width: 65%;
   display: flex;
   justify-content: flex-end;
 }
@@ -311,9 +341,39 @@
 .work-img-mobile {
   width: 100%;
   height: 100%;
-  /* position: absolute; */
-  /* top: 0; */
-  /* left: 0; */
+}
+
+@media only screen and (max-width:1024px) {
+  .work-img-div {
+    width: 70%;
+  }
+  .work-img-div-left {
+    width: 70%;
+  }
+  .work-sample-wrapper {
+    width: 90%;
+  }
+  .work-img-div-mobile {
+    left: 5em;
+  }
+  .work-img-div-ah {
+    height: 340px;
+  }
+  .work-img-div-baobab {
+    height: 340px;
+  }
+  .work-img-div-healthid {
+    height: 340px;
+  }
+  .work-img-div-portfolio {
+    height: 340px;
+  }
+  .work-img-div-mobile {
+    left: 1em;
+  }
+  .work-img-div-mob-port {
+    right: 0em
+  }
 }
 
 @media only screen and (max-width:769px) {
@@ -338,6 +398,25 @@
   }
   .work-sample-wrapper {
     width: 95%;
+  }
+  .work-img-div-ah {
+    background-size: contain;
+  }
+  .work-img-div-baobab {
+    background-size: contain;
+  }
+  .work-img-div-healthid {
+    background-size: contain;
+  }
+  .work-img-div-portfolio {
+    background-size: contain;
+  }
+  .work-img-div-mobile {
+    left: 1em;
+    margin-top: 1em;
+  }
+  .work-img-div-mob-port {
+    margin-top: 1em
   }
 }
 
@@ -390,5 +469,25 @@
   }
   .sample-toggle-btn {
     display: none;
+  }
+  .work-img-div-left {
+    width: 100%;
+  }
+  .work-img-div-healthid {
+    height: 200px;
+  }
+  .work-img-div-portfolio {
+    height: 510px;
+  }
+  .work-sample-wrapper {
+    min-height: 200px;
+  }
+  .work-img-div-mob-port {
+    right: 0em;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 13em;
+    margin-left: 7em;
   }
 }

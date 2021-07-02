@@ -7,6 +7,7 @@ import '../../assets/styles/index.css';
 
 const NavBar = ({
   skillsRef,
+  workRef,
   scrollToSection,
 }) => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -35,6 +36,7 @@ const NavBar = ({
       </button>
       <button
         className='nav-item'
+        onClick={() => handleClick(workRef)}
         id='nav-item-work'>
         {'Work'}
       </button>
@@ -52,14 +54,17 @@ const NavBar = ({
       open={open}
       onClose={handleMenuClose}>
       <MenuItem
+        className='mobile-menu-item'
         onClick={() => handleClick(skillsRef)}>
         <span className='nav-item'>{'Skills'}</span>
       </MenuItem>
       <MenuItem
-        onClick={handleMenuClose}>
+        className='mobile-menu-item'
+        onClick={() => handleClick(workRef)}>
         <span className='nav-item'>{'Work'}</span>
       </MenuItem>
       <MenuItem
+        className='mobile-menu-item'
         onClick={handleMenuClose}>
         <span className='nav-item'>{'Contacts'}</span>
       </MenuItem>
@@ -76,8 +81,8 @@ const NavBar = ({
           aria-haspopup='true'
           aria-controls='mobile-menu'
           onClick={handleMenuClick}
-          className='mobileMenu'>
-          <MenuRounded fontSize='large'/>
+          className='mobileMenu mobile-menu-btn'>
+          <MenuRounded fontSize='large' />
         </IconButton>
       </div>
       {renderMobileMenu}
@@ -91,7 +96,7 @@ NavBar.propTypes = {
   skillsRef: PropTypes.any,
   workRef: PropTypes.any,
   setCurrentRef: PropTypes.func,
-  currentRef: PropTypes.any
+  currentRef: PropTypes.any,
 };
 
 export default NavBar;

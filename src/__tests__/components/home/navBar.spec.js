@@ -23,7 +23,16 @@ describe('<NavBar />', () => {
     const buttons = wrapper.find('button');
     expect(buttons.length).toBe(3);
   });
-  it('should simulation skills button click', () => {
+  it('should simulation skills buttons clicks', () => {
+    const e = {
+      currentTarget: <div />
+    };
     wrapper.find('button').at(0).prop('onClick')();
+    wrapper.find('.mobile-menu-btn')
+      .at(0).prop('onClick')(e);
+    wrapper.find('#mobile-menu').prop('onClose')();
+    wrapper.find('.mobile-menu-item').at(0).prop('onClick')();
+    wrapper.find('.mobile-menu-item').at(1).prop('onClick')();
+    wrapper.find('#nav-item-work').prop('onClick')();
   });
 });

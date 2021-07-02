@@ -46,7 +46,6 @@ export const SkillsCard = ({
 };
 
 export const WorkSample = ({
-  sampleImg,
   projectName,
   projectDesc,
   projectSkills,
@@ -82,16 +81,11 @@ export const WorkSample = ({
   const toggleButton =
     <div 
       className='sample-toggle-btn'
-      style={direction
-        ? {
-          justifyContent: 'flex-start',
-        } : {
-          justifyContent: 'flex-end'
-        } }
       onMouseLeave={handleDotsLeave}
       onMouseOver={handleDotsHover}>
       <IconButton
         onClick={handleToggleDesc}
+        className='sample-icon-btn'
         style={direction
           ? {
             float: 'left',
@@ -133,14 +127,6 @@ export const WorkSample = ({
         onMouseLeave={handleToggleLeave}
         onMouseOver={handleToggleHover}>
         <div className={`work-img-div ${classes}`}>
-          {/* <img
-            src={sampleImg}
-            alt='sample image'
-            className='sample-img' />
-          {mobile && <img
-            src={mobile}
-            alt='mobile'
-            className='work-img-mobile' />} */}
           {mobile && <div className='work-img-div-mobile' />}
         </div>
         <div id='project-name'>
@@ -154,10 +140,7 @@ export const WorkSample = ({
           {projectName}
         </div>
         <div className={`work-img-div-left ${classes}`}>
-          <img
-            src={sampleImg}
-            alt='sample image'
-            className='sample-img' />
+          {mobile && <div className='work-img-div-mob-port' />}
         </div>
       </div>;
   const withDesc = 
@@ -208,7 +191,6 @@ SkillsCard.propTypes = {
   skills: PropTypes.array
 };
 WorkSample.propTypes = {
-  sampleImg: PropTypes.any,
   projectName: PropTypes.string.isRequired,
   projectDesc: PropTypes.string.isRequired,
   projectSkills: PropTypes.array.isRequired,
