@@ -14,13 +14,29 @@ export const Work = ({ workRef }) => {
    Management System. My first Task was to build pages ranging from business
     outlets orders and supplier information. We used React.js to develop the
     Frontend.`;
+  const ahDesc = `Soon after joining Andela as a Full time Employee,
+   I contributed to building a Medium like application, for Andela Internal use,
+   where writers within the company express themselves through their peice of
+   writing. Our 10 Developers team built this App using Node.js on the Backend
+   and React.js on the Frontend.`;
+  const portfolioDesc = `Wait...What? Yeeess, it the very work you're looking
+   at. I included this here because of the love and care with which designed and
+   and implemented this portfolio. I architectured this using React.js.`;
   const baobabSkills = [
     'React.js', 'Webpack', 'Docker', 'React Router', 'ES6/2021', 'Bootstrap',
     'Context API'
   ];
   const healthIDSkills = [
-    'React.js', 'Redux', 'Contax API', 'GraphQL',
+    'React.js', 'Redux', 'Contex API', 'GraphQL',
     'Context API', 'SASS', 'User Experience'
+  ];
+  const ahSkills = [
+    'Node.js', 'PostgresQL', 'API Architecture', 'React.js',
+    'Webpack', 'REST Endpoints', 'Authentication',
+  ];
+  const portfolioSkills = [
+    'React.js', 'Webpack', 'Responsive Design', 'React Router', 'ES6/2021',
+    'Graphics Design'
   ];
   return <div className='work-wrapper' ref={workRef}>
     <Title title='Work' />
@@ -39,19 +55,19 @@ export const Work = ({ workRef }) => {
       projectSkills={healthIDSkills} />
     <WorkSample
       projectName='Authors Haven'
-      projectDesc={baobabDesc}
+      projectDesc={ahDesc}
       classes='work-img-div-ah'
       mobile={ahMobile}
       projectLink='https://demeter-ah-frontend-staging.herokuapp.com'
-      projectSkills={baobabSkills} />
+      projectSkills={ahSkills} />
     <WorkSample
       direction='left'
       projectName='Portfolio'
-      projectDesc={healthIDDesc}
+      projectDesc={portfolioDesc}
       mobile={true}
       classes='work-img-div-portfolio'
       projectLink='https://healthid-fe.herokuapp.com'
-      projectSkills={healthIDSkills} />
+      projectSkills={portfolioSkills} />
   </div>;
 };
 
