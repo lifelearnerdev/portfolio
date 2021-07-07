@@ -11,7 +11,13 @@ describe('Should render <HomePage />', () => {
     expect(wrapper.length).toBe(1);
   });
   it('should call the NavBar component', () => {
+    const ref = {
+      current: {
+        offsetTop: 244
+      }
+    };
     expect(wrapper.find(NavBar).length).toBe(1);
+    wrapper.find(NavBar).prop('scrollToSection')(ref);
   });
   it('should call the Skills component', () => {
     expect(wrapper.find(Me).length).toBe(1);
