@@ -1,14 +1,12 @@
 import PropTypes from 'prop-types';
-import { IconButton } from '@material-ui/core';
+import { IconButton, Tooltip } from '@material-ui/core';
 import { FiberManualRecordOutlined, Clear } from '@material-ui/icons';
 import { useState } from 'react';
 
-export const Title = ({ title }) => {
+export const Title = ({ title, classes }) => {
   return (
-    <div className='title-wrapper'>
-      <h2 id='title'>
-        {title}
-      </h2>
+    <div className={`title-wrapper ${classes}`}>
+      {title}
       <div className='title-liner' />
     </div>
   );
@@ -182,8 +180,27 @@ export const WorkSample = ({
   </div>;
 };
 
+export const SocialLogo = ({
+  Logo,
+  color,
+  tooltip
+}) =>
+  <a className='contacts-link' href='#'>
+    <Tooltip title={tooltip}>
+      <IconButton style={{
+        background: 'white',
+        // padding: '5px',
+      }}>
+        <Logo
+          style={{ fontSize: '2em', color: color }}
+          className='social-icon' />
+      </IconButton>
+    </Tooltip>
+  </a>;
+
 Title.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string,
+  classes: PropTypes.string
 };
 SkillsCard.propTypes = {
   Icon: PropTypes.any,
@@ -198,4 +215,9 @@ WorkSample.propTypes = {
   projectLink: PropTypes.string,
   mobile: PropTypes.any,
   classes: PropTypes.string.isRequired
+};
+SocialLogo.propTypes = {
+  Logo: PropTypes.any,
+  color: PropTypes.string,
+  tooltip: PropTypes.string
 };

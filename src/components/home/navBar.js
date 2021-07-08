@@ -9,9 +9,11 @@ const NavBar = ({
   skillsRef,
   workRef,
   scrollToSection,
+  isVisible
 }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
+  console.log('**** ', isVisible);
 
   const handleMenuClick = (e) => {
     setAnchorEl(e.currentTarget);
@@ -70,8 +72,12 @@ const NavBar = ({
       </MenuItem>
     </Menu>;
 
-  return (
-    <div className='nav-bar'>
+  return <div
+    style={isVisible ?
+      { top: '0' } :
+      { top: '-200px' }}
+    className='nav-bar'>
+    <header>
       <div className='logo-wrapper'>
         <img src={logo} alt='logo' className='logo' id='logo' />
       </div>
@@ -87,8 +93,9 @@ const NavBar = ({
       </div>
       {renderMobileMenu}
       {renderDeskMenu}
-    </div>
-  );
+    </header>
+    
+  </div>;
 };
 
 NavBar.propTypes = {
@@ -97,6 +104,7 @@ NavBar.propTypes = {
   workRef: PropTypes.any,
   setCurrentRef: PropTypes.func,
   currentRef: PropTypes.any,
+  isVisible: PropTypes.Boolean
 };
 
 export default NavBar;

@@ -14,13 +14,13 @@ export const Work = ({ workRef }) => {
    Management System. My first Task was to build pages ranging from business
     outlets orders and supplier information. We used React.js to develop the
     Frontend.`;
-  const ahDesc = `Soon after joining Andela as a Full time Employee,
-   I contributed to building a Medium like application, for Andela Internal use,
+  const ahDesc = `Soon after joining Andela as a Full-time Employee,
+   I contributed to building a Medium like application, for Andela internal use
    where writers within the company express themselves through their peice of
    writing. Our 10 Developers team built this App using Node.js on the Backend
    and React.js on the Frontend.`;
-  const portfolioDesc = `Wait...What? Yeeess, it the very work you're looking
-   at. I included this here because of the love and care with which designed and
+  const portfolioDesc = `Wait...What? Yeeess! it's the very work you're looking
+   at :) I included this here because of the love and care with which I designed
    and implemented this portfolio. I architectured this using React.js.`;
   const baobabSkills = [
     'React.js', 'Webpack', 'Docker', 'React Router', 'ES6/2021', 'Bootstrap',
