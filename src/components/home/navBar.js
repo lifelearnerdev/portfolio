@@ -8,7 +8,9 @@ import '../../assets/styles/index.css';
 const NavBar = ({
   skillsRef,
   workRef,
+  contactsRef,
   scrollToSection,
+  isVisible
 }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -42,6 +44,7 @@ const NavBar = ({
       </button>
       <button
         className='nav-item'
+        onClick={() => handleClick(contactsRef)}
         id='nav-item-contancts'>
         {'Contacts'}
       </button>
@@ -52,26 +55,30 @@ const NavBar = ({
       id='mobile-menu'
       anchorEl={anchorEl}
       open={open}
+      style={{ top: '-1em', right: '-2em', width: '400px' }}
       onClose={handleMenuClose}>
       <MenuItem
         className='mobile-menu-item'
         onClick={() => handleClick(skillsRef)}>
-        <span className='nav-item'>{'Skills'}</span>
+        <span className='nav-item mobile-item'>{'Skills'}</span>
       </MenuItem>
       <MenuItem
         className='mobile-menu-item'
         onClick={() => handleClick(workRef)}>
-        <span className='nav-item'>{'Work'}</span>
+        <span className='nav-item mobile-item'>{'Work'}</span>
       </MenuItem>
       <MenuItem
         className='mobile-menu-item'
-        onClick={handleMenuClose}>
-        <span className='nav-item'>{'Contacts'}</span>
+        onClick={() => handleClick(contactsRef)}>
+        <span className='nav-item mobile-item'>{'Contacts'}</span>
       </MenuItem>
     </Menu>;
 
-  return (
-    <div className='nav-bar'>
+  return <div className='nav'>
+    <header style={isVisible ?
+      { top: '0' } :
+      { top: '-100px' }}
+    className='nav-bar'>
       <div className='logo-wrapper'>
         <img src={logo} alt='logo' className='logo' id='logo' />
       </div>
@@ -82,13 +89,16 @@ const NavBar = ({
           aria-controls='mobile-menu'
           onClick={handleMenuClick}
           className='mobileMenu mobile-menu-btn'>
-          <MenuRounded fontSize='large' />
+          <MenuRounded
+            style={{ marginRight: '0.5em', fontSize: '2.3em' }}
+            fontSize='large' />
         </IconButton>
       </div>
       {renderMobileMenu}
       {renderDeskMenu}
-    </div>
-  );
+    </header>
+    
+  </div>;
 };
 
 NavBar.propTypes = {
@@ -97,6 +107,8 @@ NavBar.propTypes = {
   workRef: PropTypes.any,
   setCurrentRef: PropTypes.func,
   currentRef: PropTypes.any,
+  isVisible: PropTypes.any,
+  contactsRef: PropTypes.any
 };
 
 export default NavBar;

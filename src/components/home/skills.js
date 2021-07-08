@@ -1,6 +1,9 @@
 // import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Title, SkillsCard } from './utils';
+import { 
+  SkillsCard,
+  Title
+} from './utils';
 import { Person, Airplay, StorageRounded } from '@material-ui/icons';
 
 export const Skills = ({
@@ -184,27 +187,29 @@ export const Skills = ({
   ];
 
   return (
-    <div
-      ref={skillsRef}
-      className='skills-wrapper'
-    >
-      <Title title='Skills' />
-      <div className='skills-cards'>
-        <SkillsCard
-          Icon={Person}
-          title='User Experience'
-          skills={userSkills}
-        />
-        <SkillsCard
-          Icon={Airplay}
-          title='Front End'
-          skills={feSkills}
-        />
-        <SkillsCard
-          Icon={StorageRounded}
-          title='Back End'
-          skills={beSkills}
-        />
+    <div>
+      <div
+        ref={skillsRef}
+        className='skills-wrapper'>
+        <Title title='Skills' />
+        {/* <div>Title Here</div> */}
+        <div className='skills-cards'>
+          <SkillsCard
+            Icon={Person}
+            title='User Experience'
+            skills={userSkills}
+          />
+          <SkillsCard
+            Icon={Airplay}
+            title='Front End'
+            skills={feSkills}
+          />
+          <SkillsCard
+            Icon={StorageRounded}
+            title='Back End'
+            skills={beSkills}
+          />
+        </div>
       </div>
     </div>
   );

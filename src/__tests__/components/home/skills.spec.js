@@ -23,7 +23,7 @@ describe('<Skills />', () => {
 describe('<Title />', () => {
   let wrapper = shallow(<Title title='Skills' />);
   it('should render the <Title /> component', () => {
-    expect(wrapper.find('h2').props().children).toEqual('Skills');
+    expect(wrapper.length).toBe(1);
   });
 });
 
