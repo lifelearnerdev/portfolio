@@ -387,7 +387,6 @@ html {
   display: table;
 }
 
-
 .form-input {
   width: 97%;
   font-size: 1.2rem;
@@ -398,7 +397,6 @@ html {
   background: #4F4F4F;
   display: table-cell;
 }
-
 #send {
   width: 100%;
   background: #ebf0f1;
