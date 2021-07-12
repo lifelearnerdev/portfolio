@@ -7,19 +7,24 @@ import {
   LinkedIn,
   GitHub
 } from '@material-ui/icons';
-import send from 'emailjs-com';
+import { send } from 'emailjs-com';
+import { ToastContainer, toast } from 'react-toastify';
 import {
   Title,
   SocialLogo
 } from './utils';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Contacts = ({ contactsRef }) => {
   const [email, setEmail] = useState({
     from_name: '',
-    to_name: '',
+    to_name: 'Eric',
     message: '',
     reply_to: ''
   });
+  const sent = () => toast.success('Email sent! Thanks for your time');
+  const error = () => toast
+    .error('An error occured, please check your connection');
 
   const handleChange = (e) => {
     setEmail({ ...email, [e.target.name]: e.target.value });
@@ -31,8 +36,19 @@ export const Contacts = ({ contactsRef }) => {
       'template_9m7bgjo',
       email,
       'user_0q5QVnkGL7VdbxWnqjoad'
-    );
+    ).then(() => {
+      setEmail({
+        from_name: '',
+        to_name: 'Eric',
+        message: '',
+        reply_to: ''
+      });
+      sent();
+    }).catch(() => {
+      error();
+    });
   };
+
   return <div className='contacts-wrapper' ref={contactsRef}>
     <div>
       <Title title='Contacts' classes='contacts-title' />
@@ -41,18 +57,22 @@ export const Contacts = ({ contactsRef }) => {
       <SocialLogo
         Logo={Facebook}
         tooltip='Facebook'
+        link='https://www.facebook.com/eubule.malaba'
         color='#4267B2' />
       <SocialLogo
         Logo={Twitter}
         tooltip='Twitter'
+        link='https://twitter.com/malaba21'
         color='#1DA1F2' />
       <SocialLogo
         Logo={LinkedIn}
         tooltip='LinkedIn'
+        link='https://www.linkedin.com/in/eric-malaba-87249b10a/'
         color='#2867B2' />
       <SocialLogo
         Logo={GitHub}
         tooltip='GitHub'
+        link='https://github.com/Malaba6'
         color='#211F1F' />
     </div>
     <div className='contact-form-wrapper'>
@@ -61,7 +81,9 @@ export const Contacts = ({ contactsRef }) => {
           <input
             type='text'
             className='form-input'
+            name='from_name'
             onChange={handleChange}
+            value={email.from_name}
             id='name'
             placeholder='Name' />
         </div>
@@ -69,6 +91,8 @@ export const Contacts = ({ contactsRef }) => {
           <input
             type='email'
             className='form-input'
+            name='reply_to'
+            value={email.reply_to}
             onChange={handleChange}
             id='email'
             placeholder='Email' />
@@ -77,6 +101,8 @@ export const Contacts = ({ contactsRef }) => {
           <textarea
             id='comments'
             className='form-input'
+            name='message'
+            value={email.message}
             onChange={handleChange}
             placeholder='Comments'>
           </textarea>
@@ -88,6 +114,7 @@ export const Contacts = ({ contactsRef }) => {
             id='send'
             value='Send' />
         </div>
+        <ToastContainer />
       </form>
     </div>
   </div>;

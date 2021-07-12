@@ -183,9 +183,10 @@ export const WorkSample = ({
 export const SocialLogo = ({
   Logo,
   color,
-  tooltip
+  tooltip,
+  link
 }) =>
-  <a className='contacts-link' href='#'>
+  <a className='contacts-link' target='_blank' rel='noreferrer' href={link}>
     <Tooltip title={tooltip}>
       <IconButton style={{
         background: 'white',
@@ -218,5 +219,6 @@ WorkSample.propTypes = {
 SocialLogo.propTypes = {
   Logo: PropTypes.any,
   color: PropTypes.string,
-  tooltip: PropTypes.string
+  tooltip: PropTypes.string,
+  link: PropTypes.string
 };
