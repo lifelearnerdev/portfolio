@@ -66,7 +66,7 @@ export const Work = ({ workRef }) => {
       projectDesc={portfolioDesc}
       mobile={true}
       classes='work-img-div-portfolio'
-      projectLink='https://healthid-fe.herokuapp.com'
+      projectLink='https://malaba-portfolio.herokuapp.com/'
       projectSkills={portfolioSkills} />
   </div>;
 };
