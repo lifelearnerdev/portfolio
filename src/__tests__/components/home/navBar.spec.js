@@ -33,6 +33,8 @@ describe('<NavBar />', () => {
     wrapper.find('#mobile-menu').prop('onClose')();
     wrapper.find('.mobile-menu-item').at(0).prop('onClick')();
     wrapper.find('.mobile-menu-item').at(1).prop('onClick')();
+    wrapper.find('.mobile-menu-item').at(2).prop('onClick')();
     wrapper.find('#nav-item-work').prop('onClick')();
+    wrapper.find('#nav-item-contancts').prop('onClick')();
   });
 });
