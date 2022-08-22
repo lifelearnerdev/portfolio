@@ -18,7 +18,7 @@ module.exports = {
       disableDotRule: true,
     },
     inline:true,
-    port: 8082
+    port: 9090
   },
   module: {
     rules: [
