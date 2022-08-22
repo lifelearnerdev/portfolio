@@ -48,6 +48,11 @@ export const Skills = ({
       size: 1
     },
     {
+      id: 32,
+      label: 'Tailwind',
+      size: 1.8
+    },
+    {
       id: 3,
       label: 'Javascript',
       size: 1.3,
@@ -75,7 +80,7 @@ export const Skills = ({
     {
       id: 7,
       label: 'Next JS',
-      size: 1
+      size: 1.8
     },
     {
       id: 8,
@@ -89,7 +94,7 @@ export const Skills = ({
     },
     {
       id: 10,
-      label: 'Cross-Browser Compatbility',
+      label: 'Pug',
       size: 1.3
     },
     {
@@ -99,7 +104,7 @@ export const Skills = ({
     },
     {
       id: 12,
-      label: 'ES2020',
+      label: 'ES2021',
       size: 1.3
     },
     {

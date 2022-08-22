@@ -16,30 +16,38 @@ export const Work = ({ workRef }) => {
     Frontend.`;
   const ahDesc = `Soon after joining Andela as a Full-time Employee,
    I contributed to building a Medium like application, for Andela internal use
-   where writers within the company express themselves through their peice of
+   where writers within the company express themselves through their piece of
    writing. Our 10 Developers team built this App using Node.js on the Backend
    and React.js on the Frontend.`;
-  const portfolioDesc = `Wait...What? Yeeess! it's the very work you're looking
-   at :) I included this here because of the love and care with which I designed
-   and implemented this portfolio. I architectured this using React.js.`;
+  const siaDesc = `After joining Signalytics.ai as a Frontend Engineer,
+  I started working on their e-commerce project. This is a rebate based
+  application that allows customers to buy products via amazon and receive 
+  a percentage in refund.`;
   const baobabSkills = [
     'React.js', 'Webpack', 'Docker', 'React Router', 'ES6/2021', 'Bootstrap',
     'Context API'
   ];
   const healthIDSkills = [
-    'React.js', 'Redux', 'Contex API', 'GraphQL',
+    'React.js', 'Redux', 'Context API', 'GraphQL',
     'Context API', 'SASS', 'User Experience'
   ];
   const ahSkills = [
     'Node.js', 'PostgresQL', 'API Architecture', 'React.js',
     'Webpack', 'REST Endpoints', 'Authentication',
   ];
-  const portfolioSkills = [
-    'React.js', 'Webpack', 'Responsive Design', 'React Router', 'ES6/2021',
-    'Graphics Design'
+  const siaSkills = [
+    'React.js', 'Tailwind', 'Responsive Design', 'Pug', 'Docker',
+    'Graphics Design', 'Payment Integration'
   ];
   return <div className='work-wrapper' ref={workRef}>
     <Title title='Work' />
+    <WorkSample
+      direction='left'
+      projectName='Signalytics'
+      projectDesc={siaDesc}
+      classes='work-img-div-portfolio'
+      projectLink='http://dashboard.signalytics.ai/'
+      projectSkills={siaSkills} />
     <WorkSample
       projectName='Baobab'
       projectDesc={baobabDesc}
@@ -60,14 +68,6 @@ export const Work = ({ workRef }) => {
       mobile={ahMobile}
       projectLink='https://demeter-ah-frontend-staging.herokuapp.com'
       projectSkills={ahSkills} />
-    <WorkSample
-      direction='left'
-      projectName='Portfolio'
-      projectDesc={portfolioDesc}
-      mobile={true}
-      classes='work-img-div-portfolio'
-      projectLink='https://malaba-portfolio.herokuapp.com/'
-      projectSkills={portfolioSkills} />
   </div>;
 };
 

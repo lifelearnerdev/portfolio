@@ -228,7 +228,7 @@ html {
 }
 
 .work-img-div-portfolio {
-  background: url('../images/portfolio.png');
+  background: url('../images/signalytics.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 318px;
@@ -243,7 +243,7 @@ html {
   height: 300px;
 }
 .work-img-div-mob-port {
-  background: url('../images/portmobile.png');
+  background: url('../images/signamobile.png');
   background-repeat: no-repeat;
   background-size: contain;
   right: 0;
